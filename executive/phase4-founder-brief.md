@@ -9,7 +9,7 @@
 2. The co-equal ranking preserves a real internal split: Research favored O4, Finance favored O2; no source evidence resolves that ordering.
 3. O2 has the strongest recurring and automation case, but a wrong explanation of *why* performance changed could actively damage customer trust.
 4. O4 serves an ongoing creative-testing need, but its proposed differentiation is unclear because Atria already bundles creative analysis, competitor intelligence, and benchmarking.
-5. Michael recommends low-cost Stage-A deposit/pre-commitment tests for O2 and O4 in parallel, alongside a paid O1 audit wedge that explicitly measures conversion to recurring work.
+5. The weekly review recommends one low-cost **combined O2+O4 shared-buyer** deposit/pre-commitment test, with O1 retained as the paid on-ramp and its recurring conversion explicitly measured.
 
 ## Top 3 at a glance
 
@@ -60,7 +60,7 @@
 
 Authorize the next validation sequence—while keeping the current shortlist intact:
 
-1. **O2 and O4:** Run their **Stage-A** deposit/pre-commitment tests in parallel with 3–5 targets each; only if deposits land, proceed to manual Stage-B delivery.
+1. **O2 and O4:** Run one cheap **combined shared-buyer** paid deposit/pre-commitment test; only if deposits land, proceed to manual delivery. This preserves their co-equal ranking while using real WTP to resolve the critical unknown.
 2. **O1:** Offer a fixed-price paid audit as the immediate cash-and-learning wedge, collecting payment up front and tracking whether buyers convert to O2/O4-style recurring work.
 3. **O5 / Japan:** Bundle reporting into the winner rather than sell it alone; authorize a JP-market research spike before treating the Japan wedge as a differentiator.
 
@@ -68,8 +68,8 @@ This authorization is required because prospect contact and the proposed validat
 
 ## Recommended next action
 
-**Approve the deposit-first validation sequence, not a product build.** Let actual deposits resolve the O2/O4 tie; use O1 only as a paid learning wedge and measure its conversion to recurring demand. Do not proceed to concierge delivery unless Stage-A deposits land.
+**Approve one combined O2+O4 deposit-first validation sequence, not a product build.** Let a real paid pre-commitment resolve the shared-buyer demand question; use O1 only as a paid learning wedge and measure its conversion to recurring demand. Do not proceed to concierge delivery unless the deposit/pre-commitment lands.
 
 ## Source fidelity note
 
-This brief is a presentation layer of Michael’s final post–red-team recommendation in `research/phase4-top3.md`. Evidence labels are retained as **[REAL]**, **[DESK]**, and **[ASSUMPTION]**; no new research, rankings, conclusions, or metrics have been added.
+This brief is a presentation layer of Michael’s final post–red-team recommendation in `research/phase4-top3.md`, reconciled with his `weekly-review-2026-08-24.md`. Evidence labels are retained as **[REAL]**, **[DESK]**, and **[ASSUMPTION]**; no new research, rankings, conclusions, or metrics have been added.
