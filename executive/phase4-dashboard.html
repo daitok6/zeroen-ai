@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZeroEn — Phase 4 Founder Decision</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d2522;
+      --muted: #5e6862;
+      --paper: #f6f4ed;
+      --panel: #fffdf8;
+      --line: #d9d5ca;
+      --evergreen: #1d4a3b;
+      --leaf: #6f8b54;
+      --amber: #a6551c;
+      --amber-bg: #fff0d7;
+      --real: #d8ecdf;
+      --desk: #e7edf1;
+      --assumption: #f6dfbd;
+      --shadow: 0 12px 32px rgba(39, 48, 40, .08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, "Times New Roman", serif; line-height: 1.48; }
+    .wrap { max-width: 1220px; margin: 0 auto; padding: clamp(24px, 5vw, 70px) clamp(18px, 4vw, 52px) 72px; }
+    .eyebrow, .section-label, .rank, .badge, th { font-family: "Helvetica Neue", Helvetica, sans-serif; letter-spacing: .09em; text-transform: uppercase; font-size: .72rem; font-weight: 700; }
+    .masthead { border-top: 6px solid var(--evergreen); padding-top: 20px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
+    h1 { font-size: clamp(2.4rem, 6vw, 5.8rem); line-height: .9; letter-spacing: -.055em; margin: 8px 0 14px; font-weight: 500; max-width: 850px; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); line-height: 1.05; margin: 0 0 18px; font-weight: 500; letter-spacing: -.025em; }
+    h3 { margin: 8px 0 10px; font-size: 1.4rem; line-height: 1.1; font-weight: 500; }
+    p { margin: 0 0 12px; }
+    .eyebrow { color: var(--evergreen); }
+    .status { text-align: right; color: var(--muted); max-width: 230px; font-size: .94rem; }
+    .warning { margin: 38px 0 54px; padding: 18px 20px 18px 24px; border-left: 5px solid var(--amber); background: var(--amber-bg); font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 1rem; }
+    .warning strong { color: #78350f; }
+    section { margin-top: clamp(48px, 8vw, 92px); }
+    .summary { border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+    .summary-lines { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; counter-reset: item; }
+    .summary-lines p { border-top: 2px solid var(--leaf); padding-top: 12px; margin: 0; font-size: .99rem; }
+    .summary-lines p::before { counter-increment: item; content: "0" counter(item); display: block; color: var(--leaf); font: 700 .72rem/1 "Helvetica Neue", Helvetica, sans-serif; letter-spacing: .1em; margin-bottom: 8px; }
+    .opportunities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 1px; background: var(--line); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .card { background: var(--panel); padding: 28px 25px 26px; display: flex; flex-direction: column; }
+    .card:first-child { border-top: 5px solid var(--evergreen); }
+    .card:nth-child(2) { border-top: 5px solid var(--leaf); }
+    .card:nth-child(3) { border-top: 5px solid #867257; }
+    .rank { color: var(--muted); }
+    .tagline { font-size: 1.04rem; color: var(--muted); min-height: 82px; }
+    .argument { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+    .argument + .argument { margin-top: 14px; padding-top: 0; border-top: 0; }
+    .argument strong { font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--evergreen); }
+    .argument.against strong { color: var(--amber); }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .badge { display: inline-block; padding: 4px 7px; border-radius: 2px; color: #30413a; }
+    .real { background: var(--real); } .desk { background: var(--desk); } .assumption { background: var(--assumption); color: #704411; }
+    .matrix-shell { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); }
+    table { width: 100%; border-collapse: collapse; min-width: 770px; }
+    th { text-align: left; color: var(--muted); padding: 14px 16px; border-bottom: 2px solid var(--evergreen); vertical-align: bottom; }
+    td { padding: 16px; vertical-align: top; border-bottom: 1px solid var(--line); font-size: .95rem; }
+    tr:last-child td { border-bottom: 0; } td:first-child { width: 20%; color: var(--evergreen); font-family: "Helvetica Neue", Helvetica, sans-serif; font-weight: 700; font-size: .85rem; }
+    .risk-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(22px, 4vw, 50px); }
+    .risk-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+    .risk-list li { padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .risk-list strong { color: var(--amber); }
+    .path { background: var(--evergreen); color: #f9f6ed; padding: clamp(24px, 4vw, 42px); }
+    .path h2 { color: #fffaf1; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.24); }
+    .step { background: #285443; padding: 20px; min-height: 166px; }
+    .step .section-label { color: #c7d9cb; }
+    .step h3 { color: #fffaf1; }
+    .decision { display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; padding: clamp(25px, 5vw, 50px); background: #e5e7d7; border-top: 5px solid var(--leaf); }
+    .decision .ask { font-size: clamp(1.25rem, 2.4vw, 1.8rem); line-height: 1.25; }
+    .decision ul { margin: 0; padding-left: 20px; }
+    footer { border-top: 1px solid var(--line); margin-top: 50px; padding-top: 16px; color: var(--muted); font: .83rem/1.45 "Helvetica Neue", Helvetica, sans-serif; }
+    @media (max-width: 800px) { .masthead, .risk-grid, .decision { grid-template-columns: 1fr; } .status { text-align: left; } .summary-lines, .opportunities, .steps { grid-template-columns: 1fr; } .tagline { min-height: 0; } }
+    @media print { body { background: #fff; } .wrap { max-width: none; padding: 28px; } .warning, .path, .card, .matrix-shell { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="masthead">
+      <div>
+        <div class="eyebrow">ZeroEn / Phase 4 / Founder decision</div>
+        <h1>Validate demand.<br>Do not build yet.</h1>
+      </div>
+      <p class="status"><strong>FINAL SHORTLIST</strong><br>Post red-team<br>Prepared from Michael’s final synthesis</p>
+    </header>
+
+    <aside class="warning"><strong>HYPOTHESIS WARNING.</strong> Zero primary customer interviews exist. There is no real willingness-to-pay evidence for any candidate. The shortlist identifies what deserves validation first—not a product to build or a final strategic commitment.</aside>
+
+    <section class="summary" aria-labelledby="summary-heading">
+      <div class="section-label">Five-line executive summary</div>
+      <h2 id="summary-heading">The decision is about a test sequence, not an idea contest.</h2>
+      <div class="summary-lines">
+        <p>O2 Monitoring and O4 Creative Analysis are co-equal #1; O1 Audit is #3 and an on-ramp.</p>
+        <p>Research preferred O4 while Finance preferred O2; the source does not resolve the tie.</p>
+        <p>O2’s recurring and automation case is strong, but incorrect causal explanations can harm trust.</p>
+        <p>O4 has a paid-market signal, but Atria already offers the proposed benchmarking moat.</p>
+        <p>Michael recommends deposit-first tests for O2/O4 and a paid O1 audit that measures recurring conversion.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="opportunities-heading">
+      <div class="section-label">Opportunity cards</div>
+      <h2 id="opportunities-heading">Top 3 opportunities</h2>
+      <div class="opportunities">
+        <article class="card">
+          <div class="rank">#1 / Co-equal</div>
+          <h3>O2<br>Monitoring &amp; Intelligence</h3>
+          <p class="tagline">Watch agency and higher-spend accounts; alert and explain when performance breaks or spend runs away.</p>
+          <p><span class="badge desk">[DESK] High recurring</span> <span class="badge desk">[DESK] High automation</span></p>
+          <div class="argument"><strong>Strongest case for</strong><p>It is inherently ongoing, with scheduled polling and change detection supporting a recurring service-to-software path.</p></div>
+          <div class="argument against"><strong>Strongest case against</strong><p>A confident but wrong explanation of “why” can cause a bad customer decision and destroy trust.</p></div>
+        </article>
+        <article class="card">
+          <div class="rank">#1 / Co-equal</div>
+          <h3>O4<br>Creative Performance Analysis</h3>
+          <p class="tagline">Help agencies and creative-heavy brands decide which creative elements and tests deserve the next dollar.</p>
+          <p><span class="badge desk">[DESK] High recurring</span> <span class="badge desk">[DESK] Moderate–high automation</span></p>
+          <div class="argument"><strong>Strongest case for</strong><p>An active paid market and an ongoing creative-testing cadence support repeat use and a partially automatable workflow.</p></div>
+          <div class="argument against"><strong>Strongest case against</strong><p>Atria already bundles creative analysis, competitor intelligence, and benchmarking; ZeroEn’s differentiation is unresolved.</p></div>
+        </article>
+        <article class="card">
+          <div class="rank">#3 / Paid on-ramp</div>
+          <h3>O1<br>Meta Ads Audit</h3>
+          <p class="tagline">A fixed-price second opinion for advertisers at a decision moment—not the intended end-state business.</p>
+          <p><span class="badge desk">[DESK] Low recurring standalone</span> <span class="badge desk">[DESK] High founder time</span></p>
+          <div class="argument"><strong>Strongest case for</strong><p>It has the broadest reach, lowest trust barrier, and lowest technical difficulty; it can create paid learning quickly.</p></div>
+          <div class="argument against"><strong>Strongest case against</strong><p>Free agency audits create price pressure, while the audit-to-recurring conversion assumption is unproven.</p></div>
+        </article>
+      </div>
+      <div class="legend" aria-label="Evidence legend"><span class="badge real">[REAL] cited</span><span class="badge desk">[DESK] reasoned</span><span class="badge assumption">[ASSUMPTION] unverified</span></div>
+    </section>
+
+    <section aria-labelledby="matrix-heading">
+      <div class="section-label">Comparison matrix</div>
+      <h2 id="matrix-heading">Why each belongs—and what must be disproved.</h2>
+      <div class="matrix-shell"><table>
+        <thead><tr><th>Dimension</th><th>O2 — Monitoring</th><th>O4 — Creative Analysis</th><th>O1 — Audit</th></tr></thead>
+        <tbody>
+          <tr><td>Target customer</td><td>Agencies with 5+ accounts; higher-spend advertisers / in-house teams</td><td>Agencies and DTC/ecommerce brands with enough creative volume</td><td>Advertisers/agencies at a second-opinion, new-hire, or underperformance moment</td></tr>
+          <tr><td>Evidence problem exists</td><td><span class="badge real">[REAL]</span> Crisis threads and active anomaly-detection market</td><td><span class="badge real">[REAL]</span> Active paid market: Motion, Atria, Foreplay</td><td><span class="badge real">[REAL]</span> Existing audit tools, agency free audits, Fiverr spend</td></tr>
+          <tr><td>Primary risk</td><td>Attribution noise; wrong “why” is worse than none; free native rules and API exposure</td><td>Unclear differentiation versus Atria; thin SMB data; benchmark cold start</td><td>Free alternatives, one-time demand, founder time, and possible segment mismatch</td></tr>
+          <tr><td>Most important missing evidence</td><td>WTP for explanation; false-positive tolerance; reliable causal explanation</td><td>Incremental WTP over incumbents; minimum useful spend; actual differentiator</td><td>Paid demand vs free audit; audit-to-recurring conversion; ICP match</td></tr>
+          <tr><td>Role in portfolio</td><td>Potential recurring destination; correlated with O4</td><td>Potential recurring destination; correlated with O2</td><td>Cash-and-learning wedge only; track conversion to destination</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="risk-grid" aria-labelledby="risks-heading">
+      <div>
+        <div class="section-label">Risks &amp; evidence quality</div>
+        <h2 id="risks-heading">What the shortlist does not establish</h2>
+        <ul class="risk-list">
+          <li><strong>All candidates:</strong> zero primary interviews, no real willingness-to-pay evidence, and unverified API/compute economics.</li>
+          <li><strong>O2 + O4 together:</strong> same buyer profile means a correlated rather than diversified bet.</li>
+          <li><strong>O4:</strong> the Japan wedge remains <span class="badge assumption">[ASSUMPTION]</span>; it has zero actual research.</li>
+          <li><strong>O5 Reporting:</strong> strongest quantified demand, but hyper-commoditized / weak pricing power; bundle it with the eventual O2/O4 winner rather than sell it alone.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Evidence quality</div>
+        <h2>Read the labels literally</h2>
+        <p><span class="badge real">[REAL]</span> cited public evidence, competitors, or observed alternatives.</p>
+        <p><span class="badge desk">[DESK]</span> reasoned judgments such as pricing, acquisition difficulty, recurrence, automation, and founder-time outlook.</p>
+        <p><span class="badge assumption">[ASSUMPTION]</span> unverified claims—including the JP-language wedge.</p>
+        <aside class="warning"><strong>Important:</strong> [REAL] market activity does not prove that ZeroEn’s offer will be purchased. Deposits are the first proposed evidence of willingness to pay.</aside>
+      </div>
+    </section>
+
+    <section class="path" aria-labelledby="path-heading">
+      <div class="section-label">Recommended validation path</div>
+      <h2 id="path-heading">Earn the right to do the next step.</h2>
+      <div class="steps">
+        <div class="step"><div class="section-label">Stage A / Cheapest</div><h3>Ask for deposits</h3><p>Offer O2 “watch + explain” and O4 “creative teardown + what-to-test-next” to 3–5 targets each. Seek a small refundable deposit / pre-commitment.</p></div>
+        <div class="step"><div class="section-label">Only if deposits land</div><h3>Deliver manually</h3><p>Run concierge monitoring for O2 or deliver the O4 report. No software build. O1 uses up-front payment for a fixed-price audit.</p></div>
+        <div class="step"><div class="section-label">Learning gate</div><h3>Measure the open question</h3><p>Resolve willingness to pay, then track O1 audit-to-recurring conversion before treating it as a viable on-ramp.</p></div>
+      </div>
+    </section>
+
+    <section class="decision" aria-labelledby="decision-heading">
+      <div><div class="section-label">Founder decision</div><h2 id="decision-heading">Authorize validation—not a product commitment.</h2><p class="ask">Approve parallel O2 and O4 Stage-A deposit tests, a paid O1 audit wedge with conversion tracking, and a JP-market research spike before any JP bet.</p></div>
+      <div><div class="section-label">Boundaries from the source</div><ul><li>Do not build software yet.</li><li>Do not contact prospects until this is authorized.</li><li>Do not spend or make a final product-direction commitment.</li><li>Only proceed to manual delivery if deposits land.</li></ul></div>
+    </section>
+
+    <footer>Source: Michael/god, <code>research/phase4-top3.md</code> (FINAL, post red-team). This dashboard reorganizes source material only; it adds no statistics, scores, rankings, or conclusions.</footer>
+  </main>
+</body>
+</html>
