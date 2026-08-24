@@ -157,3 +157,37 @@ material changes to company strategy, product direction, spending, external
 communications, or major new workstreams require founder approval.
 
 Routine execution of already-approved work may proceed autonomously.
+
+## Repository Release Process
+
+Approved company work should not remain stranded only in local agent
+worktrees.
+
+When work is complete and substantively approved, Michael should route it to
+Meredith, ZeroEn's Release Manager, for repository integration.
+
+Meredith owns:
+- verifying the intended changes
+- integrating approved work into main
+- pushing main to origin
+- reporting what was released
+
+Normal department agents should not push directly to main.
+
+Routine internal artifacts such as Markdown, HTML, CSV, research reports,
+department documentation, and dashboards may be released automatically after
+Michael approves them.
+
+Founder approval is required before release when:
+- COMPANY.md is materially changed
+- STRATEGY.md is materially changed
+- PRINCIPLES.md is materially changed
+- files are unexpectedly deleted
+- merge conflicts exist
+- credentials, API keys, .env files, or secrets are involved
+- force pushing or history rewriting would be required
+- the release contains consequential external or financial actions
+
+Never force push main.
+Never rewrite published history.
+Never commit secrets.
