@@ -74,3 +74,52 @@ cold-outreach plan's feasibility. The **founder's own warm network (Dwight's Par
 community venues (R3 / the Facebook Ad Hacks group) are the realistic first-batch channels**, not a
 publicly-scraped named-company list. **Open item I still owe:** a [REAL]-confirmed JP venue before any JP batch.
 Nothing sent, no one contacted, no spend.
+
+---
+
+## Sales qualification pass (Dwight)
+
+**1. Verdict on Poppy AI (C1): SKIP for batch #1.** Correctly flagged Low by Oscar — but the "hiring
+a Paid Social/Meta growth marketer" signal is actually a **double disqualifier**, not just an
+uncertainty: (a) Meta spend at a bootstrapped B2B AI SaaS is unverified and plausibly below the
+$3k+/mo band the audit's economics need, and (b) once that hire lands, Poppy AI becomes exactly the
+"already-resourced in-house team" `sales/phase5-o1-sales.md` §1 disqualifies — so even a fast yes
+today risks being stale by delivery. Not worth spending one of 3 scarce outreach attempts on a
+low-confidence, likely-disqualified lead when warmer channels exist (§3 below).
+
+**2. Routing sanity-check on Oscar's 3 recipes:** all three currently point to "EN Cold /
+first-contact" — mostly right, one refinement:
+- **R1 (LinkedIn Jobs signal)** — if the founder actually reaches out **on LinkedIn** (to a person at
+  the hiring company), route to **"Short LinkedIn / DM"** in `marketing/phase5-o1-copy.md`, not
+  "Cold (community/first contact)" — it's written for that channel's length/format. If instead
+  reaching out via the company's general contact form/email, "Cold" is the right (if imperfect)
+  fit — **there's no dedicated cold-email piece yet**; flagging as a small gap for Jim/Pam if
+  company-level outreach becomes a real channel, not a blocker for this batch.
+- **R2 (brand's own blog/LinkedIn post)** — same logic as R1: LinkedIn contact → Short LinkedIn/DM;
+  contact-form/email → Cold.
+- **R3 (community.shopify.com thread)** — **"Cold (community/first contact)" is exactly right as-is**
+  — no change needed.
+
+**3. Batch #1 sourcing recommendation — concrete work order for the founder:**
+1. **Start with `sales/phase5-o1-target-list.md` Part A (founder-network worksheet).** Highest
+   close-probability, lowest effort, and already fully prepared — work through it first.
+2. **Reserve at least 1 of the 3 slots for a non-network source, even if the network alone could
+   fill all 3.** The launch plan's own pre-registered falsification test
+   (`research/phase5-o1-launch-plan.md` §13) requires **≥1 buyer from outside the founder's
+   network** — an all-network batch would technically hit "3 customers" but fail to validate
+   anything, since network buyers may pay as a favor. Don't let easy network wins crowd out the one
+   slot that actually needs to come from a real cold/warm-adjacent source.
+3. **For that non-network slot(s), work live communities before company-level leads:** target-list's
+   Part B (Facebook Ad Hacks group [REAL], r/FacebookAds/r/PPC, community.shopify.com) and this
+   file's R3 — all three are **live, active venues with people already showing the exact trigger
+   in real time**, versus company-level leads (Poppy AI, R1, R2) which require finding a company,
+   then finding the right person at it, then confirming spend — more steps, weaker signal per
+   Oscar's own disconfirming finding above.
+4. **Company-level leads (Poppy AI, R1, R2) are the last-resort tier** — only pursue if network +
+   community venues don't fill the cap. Skip Poppy AI specifically per §1 above.
+5. **Full ¥50,000 for every contact regardless of source** — network, community, or company-level —
+   per `sales/phase5-o1-sales-comms-brief.md` §3; no discounting to close faster.
+6. **JP: hold.** No JP venue or company signal is [REAL]-confirmed by either Oscar or me — don't
+   start a JP batch until that lands.
+
+Nothing sent, no one contacted, no spend.
