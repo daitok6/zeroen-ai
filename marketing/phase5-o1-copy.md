@@ -26,13 +26,12 @@ by the brief, so varying them would produce noise, not a real choice. Pick a her
 
 ### Hero — Variant 1: "Conflict of interest" opener (leads with the problem)
 
-> **Free Meta Ads audits have a conflict of interest. This one doesn't.**
+> **Free Meta Ads audits have a conflict of interest. This one has no retainer to protect.**
 >
-> A one-time, human-reviewed audit of your Meta Ads account — paid, independent, and with no
-> retainer to sell you afterward. You get a prioritized list of what to fix. That's the whole
-> engagement.
+> A one-time, human-reviewed audit of your Meta Ads account — paid, independent, and with nothing
+> to sell you afterward. You get a prioritized list of what to fix. That's the whole engagement.
 
-### Hero — Variant 2: "Second opinion" opener (leads with the value prop)
+### Hero — Variant 2: "Second opinion" opener (leads with the value prop) — RECOMMENDED default
 
 > **A second opinion on your Meta Ads account, from someone with nothing to sell you.**
 >
@@ -175,6 +174,10 @@ To do the audit, I need one of two things: **read-only** access to your Meta Ads
 fine, and there's no downside to picking the export route. Whatever you share is used only to produce
 your audit and walkthrough. I don't request or need write access at any point, and I don't make
 changes to your account.
+
+Whatever account data or exports you share is used only for your audit, is not shared with any
+third party, and is deleted or returned to you on request once the engagement is complete.
+**[FOUNDER: confirm this data-handling is actually honored before publishing]**
 
 ### Founder
 
